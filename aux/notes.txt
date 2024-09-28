@@ -1,0 +1,12 @@
+laravel new laravel-admin-lte
+
+composer create-project laravel/laravel:^10.0 laravel-admin-lte
+cd laravel-admin-lte
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install && npm run dev
+#config .env (database)
+php artisan migrate
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:status
+php artisan adminlte:install --type=full
