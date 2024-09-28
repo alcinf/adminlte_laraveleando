@@ -176,7 +176,7 @@ return [
     'classes_auth_body' => 'bg-gradient-dark',
     'classes_auth_footer' => 'text-center',
     'classes_auth_icon' => 'fa-fw text-light',
-    'classes_auth_btn' => 'btn-flat btn-light',    
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -391,6 +391,22 @@ return [
             'text' => 'information',
             'icon_color' => 'cyan',
             'url' => '#',
+        ],
+        [
+            'text' => 'Events',
+            'icon' => 'fas fa-building',
+            'submenu'    => [
+
+                [
+                    'text' => 'Events list',
+                    'url' => '/events'
+                ],
+                [
+                    'text' => 'Create event',
+                    'url' => '/events/create'
+                ],
+
+            ]
         ],
     ],
 
