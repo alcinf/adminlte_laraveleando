@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Models\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,16 @@ Route::middleware('auth')->group(function () {
     })->name('profile');
  
     Route::get('/events', function () { 
-        return view('events');
+
+        //Obtener los eventos
+        $events = App\Models\Event::all(); 
+
+        //Asignar cabecera de nuestra datatable
+        $heads = ['ID', 'Name', 'Description', 'Status', 'Type', 'Date'];
+        
+        //retornar vista con parametros
+        return view('events', compact('events', 'heads'));
+        
     })->name('events');
 
     Route::get('/events/create', function () { 

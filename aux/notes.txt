@@ -13,3 +13,12 @@ php artisan adminlte:install --type=full
 ##Coding the template
 php artisan adminlte:plugins install --plugin=select2
 php artisan adminlte:plugins install --plugin=tempusdominusBootstrap4
+php artisan make:model Event -mf
+#new fields on model
+php artisan migrate
+php artisan tinker
+App\Models\Event::factory()->count(50)->create();
+php artisan adminlte:plugins install --plugin=datatables --plugin=datatablesPlugins
+
+https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css
+https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css
