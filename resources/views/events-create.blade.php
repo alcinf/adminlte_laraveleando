@@ -26,6 +26,25 @@
                 <option>Published</option>
             </x-adminlte-select>
         </div>
+        <div class="row"> 
+            <x-adminlte-select2 name="type" label="Tipo"
+                                data-placeholder="Select" fgroup-class="col-md-6">
+                <x-slot name="prependSlot">
+                    <div class="input-group-text bg-gradient-info">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </x-slot>
+                <option value=""></option>
+                <option>Concert</option>
+                <option>Soccer</option>
+                <option>Theater</option>
+                <option>Standup Comedy</option>
+                <option>Festival</option>
+                <option>Museum</option>
+ 
+            </x-adminlte-select2>
+ 
+        </div>
         <div class="row">
             <div class="form-group col-md-6">
                 <x-adminlte-button label="Save" theme="primary" icon="fas fa-save"/>
