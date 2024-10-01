@@ -10,3 +10,6 @@ php artisan migrate
 composer require jeroennoten/laravel-adminlte
 php artisan adminlte:status
 php artisan adminlte:install --type=full
+##Coding the template
+php artisan adminlte:plugins install --plugin=select2
+php artisan adminlte:plugins install --plugin=tempusdominusBootstrap4
